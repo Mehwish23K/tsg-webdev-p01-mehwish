@@ -4,7 +4,7 @@ A single-page personal portfolio built for The Sky Gen Web Development
 Project 01 (Beginner Level).
 
 ## Live link
-_(add your deployed URL here after hosting on Netlify/Vercel/GitHub Pages)_
+https://tsg-webdev-p01-mehwish.vercel.app/
 
 ## Description
 A responsive, single-page portfolio site presenting me as a frontend
