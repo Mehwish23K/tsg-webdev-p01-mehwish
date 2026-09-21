@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mehwish — Frontend Developer</title>
+<meta name="description" content="Mehwish — Frontend Developer portfolio. React, TypeScript, and full-stack builds." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- scroll-driven background morph layer -->
+<div id="bgMorph" aria-hidden="true"></div>
+
+<!-- custom magnetic cursor (desktop only) -->
+<div id="cursorDot" aria-hidden="true"></div>
+<div id="cursorRing" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="wrap nav-inner">
+    <a href="#home" class="mark">MEHWISH<span class="accent">.</span></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div id="navLinks" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button id="themeToggle" class="theme-toggle magnetic" aria-label="Toggle light/dark theme" aria-pressed="false">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">JUNIOR FULL-STACK DEV — KARACHI</span>
+      <h1>Hi, I'm Mehwish Kaleem.<br>I build things that <span class="glitch" data-text="actually work.">actually work.</span></h1>
+      <p class="sub">Final-year CS student. I show up, I build, I finish what I start — React and TypeScript are the tools, getting it right is the point.</p>
+      <a href="#projects" class="btn-primary magnetic">See my work <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-photo">
+      <div id="robotWrap">
+        <canvas id="robotCanvas" aria-label="An animated 3D robot mascot — click to chat"></canvas>
+        <div id="speechBubble" class="speech-bubble"></div>
+        <div id="chatHint" class="chat-hint" title="Click me — I can answer questions about Mehwish's work">
+          <i class="fa-solid fa-message"></i> Ask me
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TECH MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="wrap about-grid">
+    <div>
+      <span class="section-label">ABOUT</span>
+      <h2>A little about me.</h2>
+    </div>
+    <div class="about-body">
+      <p>
+        I'm a final-year Computer Science student at the University of Karachi and a junior full-stack
+        developer, mainly focused on frontend. I spent about a year as a junior developer intern at
+        DataFortress IT, and that's where the habit of actually finishing things properly comes from —
+        since then I've built 3-4 full-stack projects on my own, including a B2B marketplace with live
+        negotiation and payments, and a faith-tech app on the side. My strongest ground is React and
+        Tailwind, but I can carry a project end to end — auth, APIs, a real database — when it needs it.
+        I'm straightforward, I try my best, and I genuinely love the process of building something from a
+        blank editor to a working product.
+      </p>
+      <a href="assets/Mehwish-Kaleem-resume.pdf" class="btn-secondary magnetic" download>
+        <i class="fa-solid fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section alt-bg">
+  <div class="wrap">
+    <span class="section-label">SKILLS</span>
+    <h2>Where I actually stand.</h2>
+    <p class="section-desc">Some of this is solid. Some is still leveling up. I'd rather be straight about it than dress it up.</p>
+
+    <div class="skills-grid" id="skillsGrid">
+      <div class="skill-card">
+        <div class="skill-head"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+        <div class="bar"><div class="bar-fill" data-width="92"></div></div>
+        <span class="skill-tag">Solid</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-head"><i class="fa-brands fa-css3-alt"></i><span>CSS3 &amp; Tailwind</span></div>
+        <div class="bar"><div class="bar-fill" data-width="88"></div></div>
+        <span class="skill-tag">Solid</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-head"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+        <span class="skill-tag">Solid</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-head"><i class="fa-brands fa-react"></i><span>React</span></div>
+        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+        <span class="skill-tag">Solid</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-head"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+        <div class="bar"><div class="bar-fill" data-width="60"></div></div>
+        <span class="skill-tag leveling">Leveling up</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-head"><i class="fa-solid fa-database"></i><span>PostgreSQL / MongoDB</span></div>
+        <div class="bar"><div class="bar-fill" data-width="55"></div></div>
+        <span class="skill-tag leveling">Leveling up</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <span class="section-label">SELECTED WORK</span>
+    <h2>Projects worth slowing down for.</h2>
+
+    <p class="section-hint">Click a card to open the full case study.</p>
+    <div class="project-grid" id="projectGrid">
+      <article class="project-card" tabindex="0" role="button" aria-expanded="false"
+        data-title="SupplyCircle" data-tag="01 — B2B MARKETPLACE" data-status="wip" data-status-label="Deploying soon"
+        data-desc="A local B2B marketplace with role-based dashboards, real-time RFQ negotiation, and split checkout — rebuilt from a buggy prototype into a production-shaped system."
+        data-problem="The original prototype had no real access control, no live negotiation, and checkout was a static form — it looked done but wasn&apos;t usable."
+        data-approach="Rebuilt the auth layer with proper role-based dashboards, added a live RFQ negotiation flow between buyers and suppliers, and worked through a multi-party checkout structure."
+        data-improve="It&apos;s not deployed yet — getting it onto a live URL is the next thing I&apos;m doing."
+        data-stack="React,Node,PostgreSQL,Socket.io"
+        data-link="https://github.com/Mehwish23K">
+        <div class="project-img">
+          <img src="assets/images/supplycircle.png" alt="SupplyCircle buyer dashboard screenshot" loading="lazy" />
+          <span class="status-pill wip">● Deploying soon</span>
+        </div>
+        <div class="project-body">
+          <h3>SupplyCircle</h3>
+          <p>A local B2B marketplace with role-based dashboards, real-time RFQ negotiation, and a multi-party checkout flow — rebuilt from a buggy prototype into a production-shaped system.</p>
+          <span class="view-link">View case study <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </article>
+
+      <article class="project-card" tabindex="0" role="button" aria-expanded="false"
+        data-title="Sapphire Store" data-tag="02 — STORE SIMULATOR" data-status="live" data-status-label="Live"
+        data-desc="A clothing store simulator with CSV-driven dynamic filtering — a frontend build focused on real interactivity, not static pages."
+        data-problem="I wanted to practise real dynamic filtering against actual data instead of hardcoded arrays."
+        data-approach="Built a CSV-driven catalog with live filtering and sorting, focused on frontend state management and interaction polish."
+        data-improve="Would add URL-synced filter state next, so a filtered view is shareable as a link."
+        data-stack="React,Tailwind,JavaScript"
+        data-link="https://simulation-projectsapphire-store.vercel.app/">
+        <div class="project-img">
+          <img src="assets/images/sapphire.png" alt="Sapphire store simulator screenshot" loading="lazy" />
+          <span class="status-pill live">● Live</span>
+        </div>
+        <div class="project-body">
+          <h3>Sapphire Store</h3>
+          <p>A clothing store simulator with CSV-driven dynamic filtering — a frontend build focused on real interactivity, not static pages.</p>
+          <span class="view-link">View case study <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </article>
+
+      <article class="project-card" tabindex="0" role="button" aria-expanded="false"
+        data-title="Barber Shop" data-tag="03 — FRONTEND BUILD" data-status="live" data-status-label="Live"
+        data-desc="A booking-style barber shop site built as a frontend showcase — clean type hierarchy, sectioned layout, and a responsive grid."
+        data-problem="I wanted a build where the visual design carried the whole thing, with no backend to hide behind."
+        data-approach="Focused entirely on layout, spacing and type hierarchy — sectioned services, a booking-style flow, and a responsive grid that holds up on mobile."
+        data-improve="Next version would wire the booking flow to real state instead of it being presentational."
+        data-stack="React,Tailwind,CSS"
+        data-link="https://barbershop-template-five.vercel.app/">
+        <div class="project-img">
+          <img src="assets/images/barbershop.png" alt="Barber shop website screenshot" loading="lazy" />
+          <span class="status-pill live">● Live</span>
+        </div>
+        <div class="project-body">
+          <h3>Barber Shop</h3>
+          <p>A booking-style barber shop site built as a frontend showcase — clean type hierarchy, sectioned layout, and a responsive grid.</p>
+          <span class="view-link">View case study <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section alt-bg">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="section-label">LET'S TALK</span>
+      <h2>Got a project — or a role?</h2>
+      <p class="section-desc">I'm straightforward: tell me what you need built, I'll tell you honestly if and how I can help.</p>
+      <div class="contact-detail"><i class="fa-solid fa-envelope"></i> <a href="mailto:mehwishkalim23@gmail.com">mehwishkalim23@gmail.com</a></div>
+      <div class="contact-detail"><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</div>
+      <div class="social-row">
+        <a href="https://github.com/Mehwish23K" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mehwish-kaleem-b4a4831bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:mehwishkalim23@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="field">
+        <input type="text" id="name" name="name" placeholder="Your name" />
+        <span class="error-msg" id="nameError"></span>
+      </div>
+      <div class="field">
+        <input type="email" id="email" name="email" placeholder="Your email" />
+        <span class="error-msg" id="emailError"></span>
+      </div>
+      <div class="field">
+        <textarea id="message" name="message" placeholder="What are we building?"></textarea>
+        <span class="error-msg" id="messageError"></span>
+      </div>
+      <button type="submit" class="btn-primary full">Send it <i class="fa-solid fa-paper-plane"></i></button>
+      <p class="form-success" id="formSuccess">✅ Message ready — thanks, I'll reply soon.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 Mehwish Kaleem. All rights reserved.</span>
+    <div class="social-row">
+      <a href="https://github.com/Mehwish23K" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/mehwish-kaleem-b4a4831bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:mehwishkalim23@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="magnetic" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- project case-study overlay (FLIP-animated expand) -->
+<div id="caseBackdrop"></div>
+<div id="caseOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <button id="caseClose" class="magnetic" aria-label="Close case study"><i class="fa-solid fa-xmark"></i></button>
+  <div class="case-inner">
+    <span class="case-status" id="caseStatus"></span>
+    <div class="case-tag" id="caseTag"></div>
+    <h3 id="caseTitle"></h3>
+    <p class="case-desc" id="caseDesc"></p>
+
+    <div class="case-block">
+      <h4>The problem</h4>
+      <p id="caseProblem"></p>
+    </div>
+    <div class="case-block">
+      <h4>What I did</h4>
+      <p id="caseApproach"></p>
+    </div>
+    <div class="case-block">
+      <h4>What I'd improve</h4>
+      <p id="caseImprove"></p>
+    </div>
+
+    <div class="case-stack" id="caseStack"></div>
+    <a id="caseLink" href="#" target="_blank" rel="noopener" class="btn-primary magnetic">Visit project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+</div>
+
+<!-- robot chat widget -->
+<div id="botBackdrop"></div>
+<div id="botPanel" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Chat with Mehwish's robot assistant">
+  <div class="bot-header">
+    <span class="bot-avatar-dot"></span>
+    <span>Ask me anything</span>
+    <button id="botClose" class="magnetic" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="bot-body" id="botBody">
+    <div class="bot-msg bot">Hii! I'm Mehwish's assistant. What do you want to know?</div>
+  </div>
+  <div class="bot-quick-replies" id="botQuickReplies">
+    <button data-topic="projects">Her projects</button>
+    <button data-topic="skills">Her skills</button>
+    <button data-topic="contact">How to contact her</button>
+  </div>
+  <form id="botAskForm" class="bot-ask-form">
+    <input type="text" id="botAskInput" placeholder="Or type your own question..." autocomplete="off" />
+    <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
