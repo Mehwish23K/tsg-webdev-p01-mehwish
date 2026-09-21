@@ -58,19 +58,3 @@ No build step required — it's static.
 npx serve .
 ```
 
-## File structure
-```
-tsg-webdev-p01-mehwish/
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   └── Mehwish-CV.pdf   (replace with your real CV)
-└── README.md
-```
-
-## Notes
-- Replace the placeholder project links (`#`) in `index.html` with real
-  GitHub/live links once available.
-- Replace `assets/Mehwish-CV.pdf` with an actual CV file before submitting.
-- Update the email/social links in the Contact and Footer sections.
